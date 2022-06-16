@@ -110,11 +110,11 @@ button {
 <cfparam name="attributes.bulunulan_sayfa" default="1">   
 
 <cfset func_calistir= urun_function(cari_adı_argument:"#attributes.cari_adı_attribute#")>
-
+<!---
 <div style="margin-left: 50px;">
   <cfdump  var="#products_query_result#">
 </div>
-
+--->
 <div style="margin:50px;">
 
   <cfform name="cari_ara" method="post" action="https://catalyst.cosmetica.com.tr/index.cfm?fuseaction=report.detail_report&event=det&report_id=16"> <!---http adres--->
@@ -127,9 +127,9 @@ button {
       </tr>
     </table>
   </cfform>
-
+<!---
   <cfdump  var="#attributes#">  <!---filtre alanına bir kelime girip arama yaptığımızda, attribute listesinde "cari_adı_attribute" görünür. Kelime girip ara demeden önce attributes listesinde “cari_adı_attribute” görünmez (cfparam ile default bir tanım da yapılmadı ise) --->
-
+--->
 </div>
 
 <!---excel dosyası oluşturma----->
